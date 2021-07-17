@@ -10,35 +10,47 @@
 
 int melody[] = {
 
-          //1 //12  //캉캉
-          NOTE_C4,NOTE_C4, 
-          NOTE_D4,NOTE_F4,NOTE_E4,NOTE_D4, 
-          NOTE_G4,NOTE_D4, 
-          NOTE_G4,NOTE_A4,NOTE_E4,NOTE_F4,
-          //2 //14
-          NOTE_D4,NOTE_D4, 
-          NOTE_D4,NOTE_F4,NOTE_E4,NOTE_D4, 
-          NOTE_C4,NOTE_C5,NOTE_B4,NOTE_A4, 
-          NOTE_G4,NOTE_F4,NOTE_E4,NOTE_D4,
-          //3 //12
-          NOTE_C4,NOTE_C4, 
-          NOTE_D4,NOTE_F4,NOTE_E4,NOTE_D4, 
-          NOTE_G4,NOTE_G4, 
-          NOTE_G4,NOTE_A4,NOTE_E4,NOTE_F4,
-          //4 //12
-          NOTE_D4,NOTE_D4, 
-          NOTE_D4,NOTE_F4,NOTE_E4,NOTE_D4, 
-          NOTE_C4,NOTE_G4,NOTE_D4,NOTE_E4, 
-          NOTE_C4,NOTE_C5,
+//          //1 //12  //캉캉
+//          NOTE_C4,NOTE_C4, 
+//          NOTE_D4,NOTE_F4,NOTE_E4,NOTE_D4, 
+//          NOTE_G4,NOTE_D4, 
+//          NOTE_G4,NOTE_A4,NOTE_E4,NOTE_F4,
+//          //2 //14
+//          NOTE_D4,NOTE_D4, 
+//          NOTE_D4,NOTE_F4,NOTE_E4,NOTE_D4, 
+//          NOTE_C4,NOTE_C5,NOTE_B4,NOTE_A4, 
+//          NOTE_G4,NOTE_F4,NOTE_E4,NOTE_D4,
+//          //3 //12
+//          NOTE_C4,NOTE_C4, 
+//          NOTE_D4,NOTE_F4,NOTE_E4,NOTE_D4, 
+//          NOTE_G4,NOTE_G4, 
+//          NOTE_G4,NOTE_A4,NOTE_E4,NOTE_F4,
+//          //4 //12
+//          NOTE_D4,NOTE_D4, 
+//          NOTE_D4,NOTE_F4,NOTE_E4,NOTE_D4, 
+//          NOTE_C4,NOTE_G4,NOTE_D4,NOTE_E4, 
+//          NOTE_C4,NOTE_C5,
 
-//        //1 //16 //환희의 송가
-//        NOTE_E4,NOTE_E4,NOTE_F4,NOTE_G4, NOTE_G4,NOTE_F4,NOTE_E4,NOTE_D4, NOTE_C4,NOTE_C4,NOTE_D4,NOTE_E4, NOTE_E4,NOTE_D4,NOTE_D4,0,
-//        //2 //16
-//        NOTE_E4,NOTE_E4,NOTE_F4,NOTE_G4, NOTE_G4,NOTE_F4,NOTE_E4,NOTE_D4, NOTE_C4,NOTE_C4,NOTE_D4,NOTE_E4, NOTE_D4,NOTE_C4,NOTE_C4,0,
-//        //3 //18
-//        NOTE_D4,NOTE_D4,NOTE_E4,NOTE_C4, NOTE_D4,NOTE_E4,NOTE_F4,NOTE_E4,NOTE_C4, NOTE_D4,NOTE_E4,NOTE_F4,NOTE_E4,NOTE_D4, NOTE_C4,NOTE_D4,NOTE_D4,0,
-//        //4 //16
-//        NOTE_E4,NOTE_E4,NOTE_F4,NOTE_G4, NOTE_G4,NOTE_F4,NOTE_E4,NOTE_D4, NOTE_C4,NOTE_C4,NOTE_D4,NOTE_E4, NOTE_E4,NOTE_D4,NOTE_D4,0,
+        //1 //16 //환희의 송가
+        NOTE_E4,NOTE_E4,NOTE_F4,NOTE_G4, 
+        NOTE_G4,NOTE_F4,NOTE_E4,NOTE_D4, 
+        NOTE_C4,NOTE_C4,NOTE_D4,NOTE_E4, 
+        NOTE_E4,NOTE_D4,NOTE_D4,0,
+        //2 //16
+        NOTE_E4,NOTE_E4,NOTE_F4,NOTE_G4, 
+        NOTE_G4,NOTE_F4,NOTE_E4,NOTE_D4, 
+        NOTE_C4,NOTE_C4,NOTE_D4,NOTE_E4, 
+        NOTE_D4,NOTE_C4,NOTE_C4,0,
+        //3 //18
+        NOTE_D4,NOTE_D4,NOTE_E4,NOTE_C4, 
+        NOTE_D4,NOTE_E4,NOTE_F4,NOTE_E4,NOTE_C4, 
+        NOTE_D4,NOTE_E4,NOTE_F4,NOTE_E4,NOTE_D4, 
+        NOTE_C4,NOTE_D4,NOTE_D4,0,
+        //4 //16
+        NOTE_E4,NOTE_E4,NOTE_F4,NOTE_G4, 
+        NOTE_G4,NOTE_F4,NOTE_E4,NOTE_D4, 
+        NOTE_C4,NOTE_C4,NOTE_D4,NOTE_E4, 
+        NOTE_E4,NOTE_D4,NOTE_D4,0,
 
 //
 //        //1 //작은별
@@ -71,6 +83,6 @@ void loop() {
   if (newPosition != oldPosition) {
     oldPosition = newPosition;
     Serial.println(newPosition);
-    tone(8,melody[newPosition%(12+14+12+12)],100);
+    tone(8,melody[newPosition%(16+16+18+16)],100);
   }
 }
