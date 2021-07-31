@@ -189,9 +189,9 @@ void setup() {
 }
 void loop() {
         int sensorVal = analogRead(A0);
-//        Serial.println(sensorVal);
+        Serial.println(sensorVal);
 //        int stepMelody = map(sensorVal,500*4,100*2,0,7);
-        if (sensorVal < 445 ){
+        if (sensorVal < 425 ){
           int start = 1;
           while(start < music) {              
               tone(8,melody[start%music], 100);
