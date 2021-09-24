@@ -2,21 +2,21 @@ void loop() {
   touchState = digitalRead(hit);
   Serial.println(touchState);
 
-//  if (touchState == 1) {  // 안 닿아있으면
-//    printNumber(0);
-//  }
-//  else {                  // 닿아있으면
-//    printNumber(1);
-//  }
+  if (touchState == 1) {  // 안 닿아있으면
+    printShape(0);
+  }
+  else {                  // 닿아있으면
+    printShape(1);
+  }
 
 //  countHit(); // 닿은 횟수 세기 (0~9, 10번 닿으면 펑!)
 
 //  printNumber(3); // 원하는 숫자 출력하기
 //
-for (int j = 0; j < 9; j++) {
-  printShape(j);
-  delay(1000);
-}
+//for (int j = 0; j < 9; j++) {
+//  printShape(j);
+//  delay(1000);
+//}
 
 //  printShape(6); // 원하는 모양 출력하기
 //  delay(1000);
