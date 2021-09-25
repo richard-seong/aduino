@@ -30,9 +30,6 @@ void loop() {
 
 
 
-
-
-
 void printNumber(int number) {
   for (int j = 0; j < 8; j++) {
     dot.setRow(0, j, digits[number][j]);
